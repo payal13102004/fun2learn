@@ -1,0 +1,10 @@
+:root {
+  --primary-blue: #4fc3f7;
+  --secondary-yellow: #ffd600;
+  --accent-green: #69f0ae;
+  --accent-orange: #ff8a65;
+  --bg-gradient: linear-gradient(135deg, #4fc3f7 0%, #ffd600 100%);
+  --card-bg: #ffffffcc;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --font-main: 'Poppins', 'Quicksand', 'Comic Neue', sans-serif;
+}

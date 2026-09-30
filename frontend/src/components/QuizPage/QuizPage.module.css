@@ -1,0 +1,271 @@
+.wrapper {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.backBtn {
+  background: #f44336;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.backBtn:hover {
+  background: #d32f2f;
+}
+
+/* --- Selection Section --- */
+.selectionBox {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.selectionBox h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.selectRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.selectRow label {
+  font-weight: 600;
+  color: #444;
+}
+
+.selectRow select {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.selectRow select:focus {
+  border: 1.5px solid #4a6cf7;
+}
+
+.startBtn {
+  background: linear-gradient(90deg, #4a6cf7, #6f9dff);
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.startBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(74, 108, 247, 0.3);
+}
+
+/* --- Quiz Box --- */
+.quizBox {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.6s ease;
+}
+
+.quizBox h2 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* --- Question Box --- */
+.questionBox {
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e0e6ff;
+  margin-bottom: 20px;
+}
+
+.questionText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.optionBtn {
+  background: #fff;
+  border: 1.5px solid #ccc;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.optionBtn:hover {
+  border-color: #4a6cf7;
+  background: #f0f4ff;
+}
+.selected {
+  border-color: #4a6cf7;
+  background: #4a6cf7;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* --- Navigation Buttons --- */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navigation button {
+  background: #4a6cf7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navigation button:hover {
+  background: #3b5ce7;
+}
+
+.submitBtn {
+  background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+.submitBtn:hover {
+  background: linear-gradient(90deg, #388e3c, #4caf50);
+}
+
+.progressText {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* --- Result Box --- */
+.resultBox {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.resultBox h3 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.scoreText {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1a73e8;
+}
+
+.resultButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.retakeBtn,
+.progressBtn,
+.certBtn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.retakeBtn {
+  background: #f44336;
+  color: #fff;
+}
+.retakeBtn:hover { background: #d32f2f; }
+
+.certBtn {
+  background: linear-gradient(90deg, #f9a825, #fb8c00);
+  color: #fff;
+}
+.certBtn:hover {
+  background: linear-gradient(90deg, #f57f17, #e65100);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(251, 140, 0, 0.4);
+}
+
+.progressBtn {
+  background: #4a6cf7;
+  color: #fff;
+}
+.progressBtn:hover { background: #3b5ce7; }
+
+/* --- Animations --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .selectionBox,
+  .quizBox,
+  .resultBox {
+    padding: 15px;
+  }
+}

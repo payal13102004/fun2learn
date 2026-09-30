@@ -1,0 +1,336 @@
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.backBtn {
+  align-self: flex-start;
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s;
+}
+.backBtn:hover { background: #1565c0; }
+
+/* ── Main Certificate Card ── */
+.certCard {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  border-radius: 28px;
+  padding: 50px 40px 40px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.18);
+  background: linear-gradient(160deg, #c9e8ff 0%, #dff3ff 40%, #b8d9f5 100%);
+  border: 3px solid #a0cff5;
+}
+
+/* ── Decorative corner badges ── */
+.cornerTL, .cornerTR, .cornerBL, .cornerBR {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+.cornerTL { top: 10px; left: 10px; }
+.cornerTR { top: 10px; right: 10px; }
+.cornerBL { bottom: 10px; left: 10px; }
+.cornerBR { bottom: 10px; right: 10px; }
+
+/* ── Scattered decorative stars ── */
+.star {
+  position: absolute;
+  pointer-events: none;
+  animation: twinkle 2s infinite alternate;
+}
+.star1  { top: 22%; left: 30%; font-size: 0.9rem; animation-delay: 0s; }
+.star2  { top: 15%; right: 25%; font-size: 1.1rem; animation-delay: 0.3s; }
+.star3  { top: 40%; right: 15%; font-size: 0.8rem; animation-delay: 0.6s; }
+.star4  { bottom: 35%; left: 25%; font-size: 1rem; animation-delay: 0.9s; }
+.star5  { bottom: 25%; right: 30%; font-size: 0.9rem; animation-delay: 1.2s; }
+.star6  { top: 55%; left: 40%; font-size: 0.7rem; animation-delay: 0.5s; }
+.star7  { top: 30%; left: 18%; font-size: 0.8rem; animation-delay: 1s; }
+.star8  { bottom: 45%; right: 20%; font-size: 0.75rem; animation-delay: 0.2s; }
+
+@keyframes twinkle {
+  from { opacity: 0.3; transform: scale(0.8); }
+  to   { opacity: 1;   transform: scale(1.3); }
+}
+
+/* ── Planet decoration (right side) ── */
+.planetDecor {
+  position: absolute;
+  right: 30px;
+  top: 38%;
+  font-size: 3rem;
+  animation: floatSlow 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+/* ── Rocket decoration ── */
+.rocketDecor {
+  position: absolute;
+  right: 20px;
+  bottom: 60px;
+  font-size: 3.5rem;
+  animation: rocketFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+@keyframes rocketFloat {
+  0%, 100% { transform: translateY(0) rotate(-15deg); }
+  50%       { transform: translateY(-12px) rotate(-15deg); }
+}
+
+/* ── Kid illustration (left side) ── */
+.kidDecor {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  font-size: 6rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+  animation: kidBob 3s ease-in-out infinite;
+}
+
+@keyframes kidBob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* ── Gold Medal ── */
+.medalWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.medal {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffe066, #f5a623, #c47d00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(200,120,0,0.4), inset 0 -3px 6px rgba(0,0,0,0.15);
+  animation: medalBounce 1.8s ease-in-out infinite alternate;
+  border: 3px solid #ffd700;
+}
+
+@keyframes medalBounce {
+  from { transform: translateY(0) scale(1); }
+  to   { transform: translateY(-8px) scale(1.05); }
+}
+
+.medalStar { font-size: 2.2rem; }
+
+.medalRibbon {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 22px solid #e53935;
+  margin-top: -2px;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+/* ── Text ── */
+.certTitle {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #1565c0;
+  font-family: 'Georgia', serif;
+  margin: 8px 0 6px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(21,101,192,0.15);
+}
+
+.presentedTo {
+  font-size: 1rem;
+  color: #555;
+  margin: 4px 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.studentName {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #1a237e;
+  margin: 6px 0 16px;
+  font-family: 'Georgia', serif;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(26,35,126,0.12);
+}
+
+.forCompleting {
+  font-size: 1rem;
+  color: #444;
+  margin: 0 0 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.courseName {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1565c0;
+  margin: 0 0 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Score Row ── */
+.scoreRow {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 14px 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.scoreBox {
+  background: rgba(255,255,255,0.85);
+  border: 2px solid;
+  border-radius: 12px;
+  padding: 10px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 80px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(4px);
+}
+
+.scoreIcon  { font-size: 1.2rem; }
+.scoreNum   { font-size: 1.4rem; font-weight: 800; }
+.scoreLabel { font-size: 0.72rem; color: #666; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ── Footer ── */
+.certFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 20px 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.certDate {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1565c0;
+}
+
+.branding {
+  background: white;
+  color: #1565c0;
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding: 6px 18px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  letter-spacing: 1px;
+}
+
+/* ── Action Buttons ── */
+.actionButtons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.downloadBtn, .printBtn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.downloadBtn {
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: white;
+}
+.downloadBtn:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(25,118,210,0.4); }
+
+.printBtn {
+  background: white;
+  color: #1976d2;
+  border: 2px solid #1976d2;
+}
+.printBtn:hover { background: #1976d2; color: white; transform: translateY(-3px); }
+
+/* ── No Certificate ── */
+.noCertificate {
+  text-align: center;
+  padding: 60px 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+.noCertificate h3 { font-size: 1.8rem; color: #1976d2; margin-bottom: 12px; }
+.noCertificate p  { font-size: 1.1rem; color: #666; margin-bottom: 20px; }
+
+.goBackBtn {
+  padding: 12px 30px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ── Print ── */
+@media print {
+  .wrapper { background: white; }
+  .backBtn, .actionButtons { display: none; }
+  .certCard { box-shadow: none; max-width: 100%; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .certCard { padding: 40px 20px 30px; }
+  .certTitle { font-size: 1.6rem; }
+  .studentName { font-size: 1.9rem; }
+  .kidDecor { font-size: 4rem; }
+  .rocketDecor { font-size: 2.5rem; }
+  .planetDecor { font-size: 2rem; }
+  .scoreRow { gap: 8px; }
+  .scoreBox { min-width: 65px; padding: 8px 10px; }
+  .actionButtons { flex-direction: column; width: 100%; }
+  .downloadBtn, .printBtn { width: 100%; }
+}

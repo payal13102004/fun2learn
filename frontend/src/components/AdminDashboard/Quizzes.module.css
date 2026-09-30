@@ -1,0 +1,375 @@
+.container {
+  min-height: 100vh;
+  padding: 30px 40px;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h2 {
+  font-size: 1.8rem;
+  color: #0d47a1;
+  font-weight: 700;
+}
+
+.backBtn {
+  background: white;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.backBtn:hover { background: #1976d2; color: white; }
+
+.addNewBtn {
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.addNewBtn:hover { background: #0d47a1; }
+
+/* ── Form Card ── */
+.formCard {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.formCard h3 {
+  font-size: 1.3rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.formRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 10px 14px;
+  border: 1.5px solid #90caf9;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  flex: 1;
+  min-width: 180px;
+  transition: border 0.3s;
+}
+.input:focus { border-color: #1976d2; }
+
+/* ── Questions ── */
+.qHeader {
+  font-size: 1.1rem;
+  color: #1565c0;
+  margin: 10px 0 16px;
+  font-weight: 700;
+}
+
+.questionCard {
+  background: #f0f7ff;
+  border: 1.5px solid #90caf9;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.questionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qNum {
+  background: #1976d2;
+  color: white;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.removeQBtn {
+  background: #ef5350;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.removeQBtn:hover { background: #c62828; }
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.optLabel {
+  background: #1976d2;
+  color: white;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.optInput {
+  padding: 8px 12px;
+  border: 1.5px solid #90caf9;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  transition: border 0.3s;
+}
+.optInput:focus { border-color: #1976d2; }
+
+.answerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.answerRow label {
+  font-weight: 600;
+  color: #2e7d32;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.answerSelect {
+  padding: 8px 12px;
+  border: 1.5px solid #66bb6a;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  flex: 1;
+  background: #f1f8e9;
+}
+
+.addQBtn {
+  background: #43a047;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+  transition: 0.3s;
+}
+.addQBtn:hover { background: #2e7d32; }
+
+.formActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.saveBtn {
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.saveBtn:hover { background: #0d47a1; }
+
+.cancelBtn {
+  background: #e0e0e0;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cancelBtn:hover { background: #bdbdbd; }
+
+/* ── Filter ── */
+.filterSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1.5px solid #90caf9;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* ── Table ── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #e3f2fd;
+}
+
+.table th {
+  background: #1976d2;
+  color: white;
+  font-weight: 600;
+}
+
+.table tr:hover { background: #e3f2fd; }
+
+.actionBtn {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.85rem;
+}
+.actionBtn:hover { background: #1565c0; }
+
+.deleteBtn { background: #ef5350; }
+.deleteBtn:hover { background: #c62828; }
+
+.noData {
+  padding: 20px;
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .container { padding: 20px; }
+  .optionsGrid { grid-template-columns: 1fr; }
+  .formRow { flex-direction: column; }
+}
+
+/* ── PDF Upload Section ── */
+.pdfSection {
+  background: #f3e5f5;
+  border: 2px dashed #9c27b0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.pdfHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.pdfHeader span {
+  font-weight: 700;
+  color: #6a1b9a;
+  font-size: 1rem;
+}
+
+.pdfHeader small {
+  color: #888;
+  font-size: 0.82rem;
+}
+
+.pdfUploadRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pdfBtn {
+  background: #9c27b0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+.pdfBtn:hover { background: #6a1b9a; }
+.pdfBtn:disabled { background: #ce93d8; cursor: not-allowed; }
+
+.pdfStatus {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.pdfSuccess { background: #e8f5e9; color: #2e7d32; }
+.pdfError   { background: #ffebee; color: #c62828; }
+.pdfInfo    { background: #e3f2fd; color: #1565c0; }
+
+.pdfHint {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pdfHint strong { color: #6a1b9a; }
+
+.pdfHint code {
+  background: white;
+  border: 1px solid #ce93d8;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  color: #333;
+}

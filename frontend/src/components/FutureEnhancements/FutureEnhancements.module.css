@@ -1,0 +1,338 @@
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff 0%, #fafafa 100%);
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.backBtn {
+  background: white;
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+  margin-top: 6px;
+}
+.backBtn:hover { background: #1976d2; color: white; }
+
+.headerText h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0d47a1;
+  margin: 0 0 6px;
+}
+
+.headerText p {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ── Stats Banner ── */
+.statsBanner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statIcon  { font-size: 1.8rem; }
+.statValue { font-size: 1.8rem; font-weight: 900; color: #1976d2; }
+.statLabel { font-size: 0.78rem; color: #888; font-weight: 600; text-transform: uppercase; }
+
+/* ── Tag Filter ── */
+.tagFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.tagBtn {
+  padding: 7px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
+  background: white;
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tagBtn:hover { border-color: #1976d2; color: #1976d2; }
+.tagActive { background: #1976d2 !important; color: white !important; border-color: #1976d2 !important; }
+
+/* ── Phase Section ── */
+.phaseSection {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.phaseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.3s;
+}
+.phaseHeader:hover { opacity: 0.92; }
+
+.phaseLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.phaseIcon { font-size: 2rem; }
+
+.phaseLeft h2 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.phaseLabel {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.phaseRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.phaseCount {
+  background: rgba(255,255,255,0.25);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.phaseArrow { color: white; font-size: 1rem; }
+
+/* ── Cards Grid ── */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  overflow: hidden;
+}
+
+.featureCard {
+  border-radius: 12px;
+  padding: 20px;
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.featureIcon { font-size: 2rem; }
+
+.statusBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 8px;
+}
+
+.featureDesc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 12px;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.tag:hover { opacity: 0.7; }
+
+/* ── Timeline ── */
+.timeline {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.timelineTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #0d47a1;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.timelineTrack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.timelineDot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.timelineContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.timelineYear {
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.timelineLabel {
+  font-size: 0.75rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.timelineLine {
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #e0e0e0, #bdbdbd);
+  flex-shrink: 0;
+}
+
+/* ── Suggestion Box ── */
+.suggestionBox {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+.suggestionBox h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.suggestionBox p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.suggestionForm {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.suggInput {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 200px;
+  flex: 1;
+  max-width: 280px;
+}
+
+.suggBtn {
+  background: #ffd54f;
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.suggBtn:hover { background: #ffca28; transform: translateY(-2px); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .wrapper { padding: 1rem; }
+  .headerText h1 { font-size: 1.5rem; }
+  .cardsGrid { grid-template-columns: 1fr; }
+  .timelineTrack { flex-direction: column; align-items: flex-start; padding-left: 20px; }
+  .timelineLine { width: 3px; height: 30px; }
+  .timelineItem { flex-direction: column; align-items: flex-start; }
+  .timelineContent { align-items: flex-start; padding: 4px 0 4px 12px; }
+}

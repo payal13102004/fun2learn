@@ -1,0 +1,131 @@
+/* Wrapper with animated gradient */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 20% 20%, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
+  background-size: 300% 300%;
+  animation: rainbowShift 15s ease infinite;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 1.8rem;
+}
+
+/* Input groups */
+.inputGroup {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.inputGroup input {
+  width: 75%;
+  padding: 0.85rem 1rem 0.85rem 2.5rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputGroup input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.3);
+}
+
+.iconInput {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+/* Register button */
+.registerBtn {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registerBtn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* Success message */
+.success {
+  text-align: center;
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* Error message */
+.errorMsg {
+  margin-top: 1rem;
+  text-align: center;
+  color: #dc2626;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Note text */
+.note {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.loginLink {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.loginLink:hover {
+  color: #ec4899;
+}

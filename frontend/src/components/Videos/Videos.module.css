@@ -1,0 +1,311 @@
+.wrapper {
+  padding: 2rem;
+  background: #f8faff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.backBtn {
+  background: #e0e0e0;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-bottom: 1rem;
+}
+.backBtn:hover { background: #d1d1d1; }
+
+h2 {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.noData {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Card ── */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.watchedCard {
+  border: 2px solid #00b894;
+  background: #f1fff6;
+}
+
+/* ── Thumbnail ── */
+.thumbnailWrapper {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.thumbnailWrapper:hover .thumbnail {
+  transform: scale(1.08);
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+/* Play overlay */
+.playOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.thumbnailWrapper:hover .playOverlay {
+  opacity: 1;
+}
+
+/* Subject badge */
+.subjectBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ── Card Body ── */
+.cardBody {
+  padding: 0.8rem 1rem 0.4rem;
+  flex: 1;
+}
+
+.cardBody h4 {
+  color: #2d3436;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.desc {
+  color: #636e72;
+  font-size: 0.82rem;
+  margin: 0 0 4px;
+}
+
+.cardBody small {
+  color: #b2bec3;
+  font-size: 0.78rem;
+}
+
+/* ── Watch Button ── */
+.viewBtn {
+  margin: 0.8rem;
+  color: white;
+  border: none;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.viewBtn:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.doneBtn {
+  background: #00b894 !important;
+}
+
+/* ── Modal Overlay ── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modalBox {
+  background: #1a1a2e;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 880px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.6);
+}
+
+/* Modal Header */
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+}
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modalTitle span { font-size: 1.4rem; }
+
+.modalTitle h3 {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.closeBtn {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.closeBtn:hover { background: #e74c3c; }
+
+/* ── Video Container ── */
+.videoContainer {
+  width: 100%;
+  height: 480px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.videoContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.noVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #aaa;
+}
+
+/* Modal Footer */
+.modalFooter {
+  padding: 0.8rem 1.4rem;
+  background: #16213e;
+  color: #aaa;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.modalFooter strong { color: white; }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .videoContainer { height: 240px; }
+  .grid { grid-template-columns: 1fr; }
+  .modalFooter { gap: 0.8rem; }
+}
+
+/* YouTube fallback */
+.ytFallback {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.75);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.ytFallback p {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.ytOpenBtn {
+  background: #ff0000;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.ytOpenBtn:hover {
+  background: #cc0000;
+}

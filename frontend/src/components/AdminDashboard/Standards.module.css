@@ -1,0 +1,119 @@
+/* AdminDashboard.module.css */
+
+/* General layout */
+.layout {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* Topbar/Header */
+.topbar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-color: #4fc3f7;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.backBtn {
+  padding: 0.5rem 1rem;
+  background-color: #ffb74d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.backBtn:hover {
+  background-color: #ffa726;
+}
+
+/* Standard select dropdown */
+.standardSelect {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.standardSelect select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Table Section */
+.tableSection {
+  flex: 1;
+  padding: 2rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #4fc3f7;
+  color: white;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table tbody tr:hover {
+  background-color: #e3f2fd;
+  transition: 0.2s;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .headerFlex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .standardSelect {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table th, .table td {
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* Optional: highlight students with 100% progress */
+.table tbody tr td:nth-child(4) {
+  font-weight: bold;
+}
+
+.table tbody tr td:nth-child(4):after {
+  content: '%';
+}
